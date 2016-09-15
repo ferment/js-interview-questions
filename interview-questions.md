@@ -224,6 +224,17 @@ for (var i = 0; i < 5; i++) {
 
 Turn it into an IIFE and pass the value of `i` for each one.
 
+### Another answer:
+
+```js
+for (var i = 0; i < 5; i++) {
+  setTimeout(function(num) {
+    console.log(num)
+  }.bind(this, i), i*500);
+}
+```
+
+Use 'bind' to bind the value of `i` for each callback.
 
 
 # 9. Rapid-fire questions!
